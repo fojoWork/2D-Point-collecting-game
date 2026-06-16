@@ -1,5 +1,5 @@
 #include <vector>
-#include <chrono>
+
 class Movement;
 class Food;
 class Map;
@@ -19,10 +19,8 @@ class Map {
   protected:
       std::vector<std::vector<int>> grid{5, std::vector<int>(5,0)};
   public:
-      void display_grid(Food &food, Movement &movement, std::chrono::steady_clock::time_point &start_time, double time_left);
+      void display_grid(Food &food, Movement &movement);
 };
-
-
 
 class Food {
    private:
